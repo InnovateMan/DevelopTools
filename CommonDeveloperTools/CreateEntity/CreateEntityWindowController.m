@@ -304,6 +304,11 @@
         [synthesizeString appendFormat:@"@synthesize %@;\n", key];
         [defineString appendFormat:@"#define %@ @\"%@\"\n",[self defineKey:name varName:key],key];
 
+        if ([temStr containsString:@"Array"])
+        {
+            
+        }
+        
         NSString *className = [[temStr componentsSeparatedByString:@" "] objectAtIndex:0];
 		if (className && [className length] > 0)
 		{
@@ -490,6 +495,8 @@
 - (void)generateClassByJsonDic:(NSDictionary *)dictionary className:(NSString *)className
 {
 	
+    NSMutableDictionary *arrayNameAndObjectType = [NSMutableDictionary dictionary];
+    
 	NSMutableDictionary *variablesDir = [[NSMutableDictionary alloc] init];
 
 	for(NSString *key in [dictionary allKeys])
@@ -514,6 +521,20 @@
 		}
 		else if ([type containsString:@"Array"])
 		{
+            NSArray *temArray = (NSArray *)objet;
+            
+            if ([temArray count] > 0)
+            {
+                id newObject = [temArray firstObject];
+                if ([newObject isKindOfClass:[NSDictionary class]])
+                {
+                    NSString *subClassName = [self uppercaseFirstChar:key];
+                    [self generateClassByJsonDic:newObject
+                                       className:subClassName];
+
+                }
+            }
+            
 			[variablesDir setObject:@"NSArray *" forKey:key];
 		}
 		NSLog(@"%@",NSStringFromClass([objet class]));
@@ -524,6 +545,7 @@
 
     [variablesDir release];
 }
+
 
 - (IBAction)generateClass:(id)sender 
 {
