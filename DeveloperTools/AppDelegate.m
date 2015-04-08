@@ -14,6 +14,16 @@
 
 - (void)dealloc
 {
+	
+	if (_arcWindowController)
+	{
+		[_arcWindowController release];
+	}
+	
+	if (_arcForThirdWindowController)
+	{
+		[_arcForThirdWindowController release];
+	}
     [createEntityWindowController release];
     [super dealloc];
 }
@@ -34,6 +44,28 @@
     [[createEntityWindowController window] makeKeyAndOrderFront:nil];
 
   
+}
+
+- (IBAction)addARCConfig:(id)sender 
+{
+	if (!_arcWindowController)
+	{
+		_arcWindowController = [[HandleARCWindowController alloc] initWithWindowNibName:@"HandleARCWindowController"];
+		
+	}
+	
+	[[_arcWindowController window] makeKeyAndOrderFront:nil];
+}
+
+
+- (IBAction)addARCConfigForThirdPart:(id)sender 
+{
+	if (!_arcForThirdWindowController)
+	{
+		_arcForThirdWindowController = [[HandleARCForThirdWindowController alloc] initWithWindowNibName:@"HandleARCForThirdWindowController"];
+	}
+	[[_arcForThirdWindowController window] makeKeyAndOrderFront:nil];
+	
 }
 
 

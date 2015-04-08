@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CommonDeveloperTools/CreateEntity/CreateEntityWindowController.m"
-            timestampString = "429702138.944122"
+            timestampString = "450196871.22077"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-generateClass:andVarsInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,27 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CommonDeveloperTools/CreateEntity/CreateEntityWindowController.m"
-            timestampString = "429702138.944122"
+            timestampString = "450196871.22077"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
-            landmarkName = "-generateClass:forDic:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CommonDeveloperTools/CreateEntity/CreateEntityWindowController.m"
-            timestampString = "429702138.944122"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
             landmarkName = "-generateClass:forDic:"
             landmarkType = "5">
          </BreakpointContent>

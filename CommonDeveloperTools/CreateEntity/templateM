@@ -53,6 +53,7 @@
 #encodeWithCoder#
 }
 
+#setter#
 
 - (NSString *)description
 {

@@ -14,6 +14,7 @@
 @end
 
 @implementation CreateEntityWindowController
+static NSMutableArray *generateClassArray = nil;
 
 @synthesize mainContentTestView;
 @synthesize classNameField;
@@ -253,7 +254,6 @@
 
 
 
-
 - (void)generateClass:(NSString *)name forDic:(NSDictionary *)variablesDic
 {
     NSString *temStr = @"";
@@ -277,6 +277,9 @@
     NSMutableString *import = [NSMutableString string];
 
     NSMutableString *defineString = [NSMutableString string];
+	
+	NSMutableString *setteString = [NSMutableString string];
+
 
 
     for(NSString *key in [variablesDic allKeys])
@@ -304,10 +307,26 @@
         [synthesizeString appendFormat:@"@synthesize %@;\n", key];
         [defineString appendFormat:@"#define %@ @\"%@\"\n",[self defineKey:name varName:key],key];
 
-        if ([temStr containsString:@"Array"])
+		
+		NSString *className1 = [self uppercaseFirstChar:key];
+        if ([temStr containsString:@"Array"] &&[generateClassArray containsObject:className1])
         {
-            
-        }
+			[setteString appendFormat:@"- (void)set%@:(NSArray *)array\n"
+			 "{\n"
+				"	NSMutableArray *temArray = [[NSMutableArray alloc] initWithCapacity:[array count]];\n"
+				"	for (NSDictionary *dic in array)\n"
+				"	{\n"
+			 "		%@ *item = [[[%@ alloc]initWithDictionary:dic] autorelease];\n"
+			 "		[array addObject:item];\n"
+				"	}\n"
+				"	[_%@ release];\n"
+				"	_%@ = temArray;\n"
+			 "}\n\n",className1,className1,className1,key,key];
+			
+			[import appendFormat:@"#import \"%@.h\"\n",className1];
+
+		}
+		
         
         NSString *className = [[temStr componentsSeparatedByString:@" "] objectAtIndex:0];
 		if (className && [className length] > 0)
@@ -378,7 +397,8 @@
 						  deallocString,@"dealloc",
 						  initWithDictionaryString,@"initWithDictionary",
 						  initWithCoderString,@"initWithCoder",
-						  encodeWithCoderString,@"encodeWithCoder",nil];
+						  encodeWithCoderString,@"encodeWithCoder",
+						  setteString,@"setter",nil];
     
     
     
@@ -495,8 +515,12 @@
 - (void)generateClassByJsonDic:(NSDictionary *)dictionary className:(NSString *)className
 {
 	
-    NSMutableDictionary *arrayNameAndObjectType = [NSMutableDictionary dictionary];
-    
+	if (!generateClassArray)
+    {
+		generateClassArray = [[NSMutableArray alloc] init];
+	}
+	[generateClassArray addObject:className];
+
 	NSMutableDictionary *variablesDir = [[NSMutableDictionary alloc] init];
 
 	for(NSString *key in [dictionary allKeys])
@@ -519,11 +543,11 @@
 			[self generateClassByJsonDic:objet className:[self uppercaseFirstChar:key]];
 			
 		}
-		else if ([type containsString:@"Array"])
+		else if ([type containsString:@"Array"] )
 		{
             NSArray *temArray = (NSArray *)objet;
             
-            if ([temArray count] > 0)
+            if ([temArray count] > 0 )
             {
                 id newObject = [temArray firstObject];
                 if ([newObject isKindOfClass:[NSDictionary class]])
@@ -531,7 +555,7 @@
                     NSString *subClassName = [self uppercaseFirstChar:key];
                     [self generateClassByJsonDic:newObject
                                        className:subClassName];
-
+					
                 }
             }
             

@@ -13,6 +13,12 @@
 		A80879361ACD292100AB8E33 /* HandleARCForThirdWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80879341ACD292100AB8E33 /* HandleARCForThirdWindowController.xib */; };
 		A825E3C41ACCDE0900A4DE5C /* HandleARCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825E3C21ACCDE0900A4DE5C /* HandleARCWindowController.m */; };
 		A825E3C51ACCDE0900A4DE5C /* HandleARCWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A825E3C31ACCDE0900A4DE5C /* HandleARCWindowController.xib */; };
+		A87508841AD56EC100354495 /* JPinYinUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 277FC1C9285235A424C260AA /* JPinYinUtil.m */; };
+		A87508851AD56EC100354495 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 277FC91637C6CD646AF92722 /* JSONKit.m */; };
+		A87508861AD5720600354495 /* HandleARCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825E3C21ACCDE0900A4DE5C /* HandleARCWindowController.m */; };
+		A87508871AD5720600354495 /* HandleARCForThirdWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A80879331ACD292100AB8E33 /* HandleARCForThirdWindowController.m */; };
+		A87508881AD5720F00354495 /* HandleARCWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A825E3C31ACCDE0900A4DE5C /* HandleARCWindowController.xib */; };
+		A87508891AD5721400354495 /* HandleARCForThirdWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80879341ACD292100AB8E33 /* HandleARCForThirdWindowController.xib */; };
 		E92F4FBE18F3DE84001A1DAA /* ObjectType.plist in Resources */ = {isa = PBXBuildFile; fileRef = E92F4FBD18F3DE84001A1DAA /* ObjectType.plist */; };
 		E94B416818F3EF1300121B3A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94B416718F3EF1300121B3A /* Cocoa.framework */; };
 		E94B417218F3EF1300121B3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E94B417018F3EF1300121B3A /* InfoPlist.strings */; };
@@ -421,10 +427,12 @@
 			files = (
 				E94B417218F3EF1300121B3A /* InfoPlist.strings in Resources */,
 				E94B418018F3EF1300121B3A /* Images.xcassets in Resources */,
+				A87508891AD5721400354495 /* HandleARCForThirdWindowController.xib in Resources */,
 				E94B41AF18F3EFD100121B3A /* templateM in Resources */,
 				E94B41A618F3EFA100121B3A /* EntityPropertyWindowController.xib in Resources */,
 				E94B41B718F3F47700121B3A /* CreateEntityWindowController.xib in Resources */,
 				E94B417818F3EF1300121B3A /* Credits.rtf in Resources */,
+				A87508881AD5720F00354495 /* HandleARCWindowController.xib in Resources */,
 				E94B41A218F3EF8500121B3A /* MainMenu.xib in Resources */,
 				E94B41AD18F3EFD100121B3A /* ObjectType.plist in Resources */,
 				E94B41AE18F3EFD100121B3A /* templateH in Resources */,
@@ -463,8 +471,12 @@
 			files = (
 				E94B41A518F3EFA100121B3A /* EntityPropertyWindowController.m in Sources */,
 				E94B41A118F3EF8500121B3A /* AppDelegate.m in Sources */,
+				A87508871AD5720600354495 /* HandleARCForThirdWindowController.m in Sources */,
 				E94B417418F3EF1300121B3A /* main.m in Sources */,
+				A87508841AD56EC100354495 /* JPinYinUtil.m in Sources */,
+				A87508851AD56EC100354495 /* JSONKit.m in Sources */,
 				E94B41AC18F3EFB400121B3A /* StringUtil.m in Sources */,
+				A87508861AD5720600354495 /* HandleARCWindowController.m in Sources */,
 				E94B41B618F3F45400121B3A /* CreateEntityWindowController.m in Sources */,
 				E94B41A918F3EFB400121B3A /* NSData+base64.m in Sources */,
 				E94B41AA18F3EFB400121B3A /* NSObject+Properties.m in Sources */,
