@@ -1,0 +1,25 @@
+//
+//  #name#
+//  Model
+//
+//  Created by Suny on 15/4/2.
+//  Copyright (c) 2015年 Sina. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import#
+
+#define#
+
+@interface #name# : NSObject<NSCoding>
+
+
+#property#
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
+- (NSMutableDictionary *)dictionaryWithNameAndValue;
+
+
+
+@end

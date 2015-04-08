@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TEXT</key>
+	<string>NSString *</string>
+	<key>字符串</key>
+	<string>NSString *</string>
+	<key>INTERGER</key>
+	<string>int </string>
+	<key>REAL</key>
+	<string>float </string>
+	<key>BLOB</key>
+	<string>NSDta *</string>
+	<key>STRING</key>
+	<string>NSString *</string>
+	<key>INT</key>
+	<string>int </string>
+</dict>
+</plist>

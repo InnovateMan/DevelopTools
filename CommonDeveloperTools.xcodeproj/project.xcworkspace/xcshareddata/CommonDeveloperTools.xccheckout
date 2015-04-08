@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A8A9AA2B-1FE8-4DD6-A1A4-01C41C0D7CAD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CommonDeveloperTools</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>578e5eb4-b328-4605-8693-0fe9d54cfd55</key>
+		<string>svn://localhost/XcodePlugin-DeveloperTools</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CommonDeveloperTools.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>578e5eb4-b328-4605-8693-0fe9d54cfd55</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>578e5eb4-b328-4605-8693-0fe9d54cfd55</key>
+		<string>svn://localhost</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://localhost/XcodePlugin-DeveloperTools/CommonDeveloperTools.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>578e5eb4-b328-4605-8693-0fe9d54cfd55</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>578e5eb4-b328-4605-8693-0fe9d54cfd55</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CommonDeveloperTools</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,76 @@
+//  
+//  #name#
+//  Model
+//
+//  Created by Suny on 15/4/2.
+//  Copyright (c) 2015年 Sina. All rights reserved.
+//
+
+#import "#name#.h"
+
+@implementation #name#
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+	self = [self init];
+	if(self)
+	{
+#initWithDictionary#
+	}
+	return self;
+}
+
+- (NSMutableDictionary *)dictionaryWithNameAndValue
+{
+    NSMutableDictionary *mutableDictionary = [NSMutableDictionary dictionary];
+
+#dictionaryWithNameAndValue#
+
+    return mutableDictionary;
+}
+
+
+- (id)mutableCopyWithZone:(NSZone *)zone
+{
+    id copy = NSCopyObject(self, 0, zone);
+    return copy;
+}
+
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self)
+    {
+#initWithCoder#
+    }
+
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+#encodeWithCoder#
+}
+
+
+- (NSString *)description
+{
+    NSString *result = [NSString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
+#description#
+    result = [result stringByAppendingString:@">\n"];
+    return result;
+}
+
+
+
+- (void)dealloc
+{
+#dealloc#
+    [super dealloc];
+}
+
+
+
+
+@end
