@@ -39,7 +39,7 @@
      }];
 }
 
-- (IBAction)changeThirPartPath:(NSButton *)sender
+- (IBAction)changeThirdPartPath:(NSButton *)sender
 {
     NSOpenPanel *panel = [NSOpenPanel openPanel];
     panel.canChooseDirectories = YES;
@@ -85,17 +85,19 @@
             
             //准备工作就绪 现在开始循环
             NSString *filename;
-            while(filename = [direnum nextObject])
+            filename = [direnum nextObject];
+            while(filename)
             {
                 NSString *filePath = [home stringByAppendingPathComponent :filename];
                 [files addObject:filePath];
+                filename = [direnum nextObject];
             }
         }
         
         
         NSEnumerator *filenum;
         NSString *filename;
-        NSArray *projectPathArray = serarceFileArray(self.projectPath.stringValue, @"project.pbxproj");
+        NSArray *projectPathArray = serarchFileArray(self.projectPath.stringValue, @"project.pbxproj");
         
         if ([projectPathArray count] == 0)
         {

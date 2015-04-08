@@ -10,36 +10,31 @@
 	<string>CommonDeveloperTools</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>578e5eb4-b328-4605-8693-0fe9d54cfd55</key>
-		<string>svn://localhost/XcodePlugin-DeveloperTools</string>
+		<key>764784D207E9DE31115B514BC3F71CD447C52597</key>
+		<string>https://github.com/InnovateMan/DevelopTools.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CommonDeveloperTools.xcodeproj/project.xcworkspace</string>
+	<string>CommonDeveloperTools.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>578e5eb4-b328-4605-8693-0fe9d54cfd55</key>
+		<key>764784D207E9DE31115B514BC3F71CD447C52597</key>
 		<string>../..</string>
 	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>578e5eb4-b328-4605-8693-0fe9d54cfd55</key>
-		<string>svn://localhost</string>
-	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>svn://localhost/XcodePlugin-DeveloperTools/CommonDeveloperTools.xcodeproj/project.xcworkspace</string>
+	<string>https://github.com/InnovateMan/DevelopTools.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>578e5eb4-b328-4605-8693-0fe9d54cfd55</string>
+	<string>764784D207E9DE31115B514BC3F71CD447C52597</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>578e5eb4-b328-4605-8693-0fe9d54cfd55</string>
+			<string>764784D207E9DE31115B514BC3F71CD447C52597</string>
 			<key>IDESourceControlWCCName</key>
-			<string>CommonDeveloperTools</string>
+			<string>DevelopTools</string>
 		</dict>
 	</array>
 </dict>

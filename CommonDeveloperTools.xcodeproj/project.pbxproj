@@ -11,7 +11,6 @@
 		A80879361ACD292100AB8E33 /* HandleARCForThirdWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80879341ACD292100AB8E33 /* HandleARCForThirdWindowController.xib */; };
 		A825E3C41ACCDE0900A4DE5C /* HandleARCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825E3C21ACCDE0900A4DE5C /* HandleARCWindowController.m */; };
 		A825E3C51ACCDE0900A4DE5C /* HandleARCWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A825E3C31ACCDE0900A4DE5C /* HandleARCWindowController.xib */; };
-		A8861A401ACBAA52007C671C /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = A8861A3E1ACBAA52007C671C /* MethodSwizzle.m */; };
 		E92F4FBE18F3DE84001A1DAA /* ObjectType.plist in Resources */ = {isa = PBXBuildFile; fileRef = E92F4FBD18F3DE84001A1DAA /* ObjectType.plist */; };
 		E94B416818F3EF1300121B3A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94B416718F3EF1300121B3A /* Cocoa.framework */; };
 		E94B417218F3EF1300121B3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E94B417018F3EF1300121B3A /* InfoPlist.strings */; };
@@ -75,8 +74,6 @@
 		A825E3C11ACCDE0900A4DE5C /* HandleARCWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleARCWindowController.h; sourceTree = "<group>"; };
 		A825E3C21ACCDE0900A4DE5C /* HandleARCWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleARCWindowController.m; sourceTree = "<group>"; };
 		A825E3C31ACCDE0900A4DE5C /* HandleARCWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandleARCWindowController.xib; sourceTree = "<group>"; };
-		A8861A3D1ACBAA52007C671C /* MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzle.h; sourceTree = "<group>"; };
-		A8861A3E1ACBAA52007C671C /* MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzle.m; sourceTree = "<group>"; };
 		A8861A3F1ACBAA52007C671C /* XcodeMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeMisc.h; sourceTree = "<group>"; };
 		E92F4FBD18F3DE84001A1DAA /* ObjectType.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ObjectType.plist; sourceTree = "<group>"; };
 		E94B416618F3EF1300121B3A /* DeveloperTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeveloperTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,10 +105,10 @@
 		E9D4988618F3CF6E003C8665 /* CommonDeveloperTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDeveloperTools.h; sourceTree = "<group>"; };
 		E9D4988718F3CF6E003C8665 /* CommonDeveloperTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonDeveloperTools.m; sourceTree = "<group>"; };
 		E9D4988918F3CF6E003C8665 /* CommonDeveloperTools-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommonDeveloperTools-Prefix.pch"; sourceTree = "<group>"; };
-		E9EF894D18F3D37500EDB754 /* JPinYinUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPinYinUtil.h; sourceTree = "<group>"; };
-		E9EF894E18F3D37500EDB754 /* JPinYinUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPinYinUtil.m; sourceTree = "<group>"; };
-		E9EF894F18F3D37500EDB754 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		E9EF895018F3D37500EDB754 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		E9EF894D18F3D37500EDB754 /* JPinYinUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JPinYinUtil.h; path = ../JPinYinUtil.h; sourceTree = "<group>"; };
+		E9EF894E18F3D37500EDB754 /* JPinYinUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JPinYinUtil.m; path = ../JPinYinUtil.m; sourceTree = "<group>"; };
+		E9EF894F18F3D37500EDB754 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = ../JSONKit.h; sourceTree = "<group>"; };
+		E9EF895018F3D37500EDB754 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ../JSONKit.m; sourceTree = "<group>"; };
 		E9EF895118F3D37500EDB754 /* NSData+base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+base64.h"; sourceTree = "<group>"; };
 		E9EF895218F3D37500EDB754 /* NSData+base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+base64.m"; sourceTree = "<group>"; };
 		E9EF895318F3D37500EDB754 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
@@ -174,6 +171,17 @@
 				A80879341ACD292100AB8E33 /* HandleARCForThirdWindowController.xib */,
 			);
 			path = HandleARC;
+			sourceTree = "<group>";
+		};
+		A8EDB5ED1AD4FCD400EB5062 /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				E9EF894F18F3D37500EDB754 /* JSONKit.h */,
+				E9EF895018F3D37500EDB754 /* JSONKit.m */,
+				E9EF894D18F3D37500EDB754 /* JPinYinUtil.h */,
+				E9EF894E18F3D37500EDB754 /* JPinYinUtil.m */,
+			);
+			path = ThirdPart;
 			sourceTree = "<group>";
 		};
 		E94B416918F3EF1300121B3A /* Other Frameworks */ = {
@@ -305,21 +313,16 @@
 		E9EF894C18F3D37500EDB754 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				A8861A3D1ACBAA52007C671C /* MethodSwizzle.h */,
-				A8861A3E1ACBAA52007C671C /* MethodSwizzle.m */,
-				A8861A3F1ACBAA52007C671C /* XcodeMisc.h */,
-				E9EF894D18F3D37500EDB754 /* JPinYinUtil.h */,
-				E9EF894F18F3D37500EDB754 /* JSONKit.h */,
+				A8EDB5ED1AD4FCD400EB5062 /* ThirdPart */,
 				E9EF895118F3D37500EDB754 /* NSData+base64.h */,
-				E9EF895318F3D37500EDB754 /* NSObject+Properties.h */,
-				E9EF895518F3D37500EDB754 /* NSString+Extension.h */,
-				E9EF895718F3D37500EDB754 /* StringUtil.h */,
-				E9EF894E18F3D37500EDB754 /* JPinYinUtil.m */,
-				E9EF895018F3D37500EDB754 /* JSONKit.m */,
 				E9EF895218F3D37500EDB754 /* NSData+base64.m */,
+				E9EF895318F3D37500EDB754 /* NSObject+Properties.h */,
 				E9EF895418F3D37500EDB754 /* NSObject+Properties.m */,
+				E9EF895518F3D37500EDB754 /* NSString+Extension.h */,
 				E9EF895618F3D37500EDB754 /* NSString+Extension.m */,
+				E9EF895718F3D37500EDB754 /* StringUtil.h */,
 				E9EF895818F3D37500EDB754 /* StringUtil.m */,
+				A8861A3F1ACBAA52007C671C /* XcodeMisc.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -491,7 +494,6 @@
 				E9EF895B18F3D37500EDB754 /* NSData+base64.m in Sources */,
 				E9EF895918F3D37500EDB754 /* JPinYinUtil.m in Sources */,
 				E9EF895A18F3D37500EDB754 /* JSONKit.m in Sources */,
-				A8861A401ACBAA52007C671C /* MethodSwizzle.m in Sources */,
 				A825E3C41ACCDE0900A4DE5C /* HandleARCWindowController.m in Sources */,
 				E9EF895C18F3D37500EDB754 /* NSObject+Properties.m in Sources */,
 				E9EF896718F3D44400EDB754 /* EntityPropertyWindowController.m in Sources */,

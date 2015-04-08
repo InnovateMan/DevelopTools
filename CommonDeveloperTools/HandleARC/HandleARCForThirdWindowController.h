@@ -14,6 +14,6 @@
 @property (assign) IBOutlet NSTextField *projectPath;
 - (IBAction)changeProjectPath:(NSButton *)sender;
 
-- (IBAction)changeThirPartPath:(NSButton *)sender;
+- (IBAction)changeThirdPartPath:(NSButton *)sender;
 - (IBAction)beginHandle:(NSButton *)sender;
 @end

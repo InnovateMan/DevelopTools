@@ -68,7 +68,7 @@
 - (NSString *)letters
 {
     NSMutableString *letterString = [NSMutableString string];
-    int len = [self length];
+    NSInteger len = [self length];
     for (int i = 0;i < len;i++)
     {
         NSString *oneChar = [[self substringFromIndex:i] substringToIndex:1];

@@ -7,6 +7,7 @@
 //
 
 #import "HandleARCWindowController.h"
+#import "NSString+Extension.h"
 
 @interface HandleARCWindowController ()
 
@@ -14,7 +15,8 @@
 
 @implementation HandleARCWindowController
 
-- (void)windowDidLoad {
+- (void)windowDidLoad
+{
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
@@ -25,7 +27,8 @@
 NSArray * serachARCFileInDir(NSString *filePath)
 {
     NSMutableArray *array = [NSMutableArray array];
-    @autoreleasepool {
+    @autoreleasepool
+    {
         NSFileManager *manager;
         manager = [NSFileManager defaultManager];
         
@@ -37,14 +40,15 @@ NSArray * serachARCFileInDir(NSString *filePath)
         
         //准备工作就绪 现在开始循环
         NSString *filename;
-        while(filename = [direnum nextObject])
+        filename = [direnum nextObject];
+        while(filename)
         {
-            NSString *filePath = [home stringByAppendingPathComponent :filename];
+            NSString *path = [home stringByAppendingPathComponent :filename];
             
             //如果文件的扩展名是 @"jpg" 添加到数组
             if([filename hasSuffix: @".m"])
             {
-                NSString *string = [NSString stringWithContentsOfFile:filePath
+                NSString *string = [NSString stringWithContentsOfFile:path
                                                              encoding:NSUTF8StringEncoding
                                                                 error:nil];
                 NSString *firstLine = [[string componentsSeparatedByString:@"\n"] firstObject];
@@ -57,6 +61,7 @@ NSArray * serachARCFileInDir(NSString *filePath)
             else
             {
             }
+            filename = [direnum nextObject];
         }
         
     }
@@ -65,11 +70,12 @@ NSArray * serachARCFileInDir(NSString *filePath)
     
 }
 
-NSArray * serarceFileArray(NSString *home,NSString *fileExt)
+NSArray *serarchFileArray(NSString *home, NSString *fileExt)
 {
     NSMutableArray *files = [NSMutableArray array];
     
-    @autoreleasepool {
+    @autoreleasepool
+    {
         NSFileManager *manager;
         manager = [NSFileManager defaultManager];
         
@@ -79,14 +85,16 @@ NSArray * serarceFileArray(NSString *home,NSString *fileExt)
         
         //准备工作就绪 现在开始循环
         NSString *filename;
-        while(filename = [direnum nextObject])
+        filename = [direnum nextObject];
+        while(filename)
         {
             NSString *filePath = [home stringByAppendingPathComponent :filename];
-            //如果文件的扩展名是 @"jpg" 添加到数组
+
             if([filename hasSuffix: fileExt])
             {
                 [files addObject:filePath];
             }
+            filename = [direnum nextObject];
         }
     }
     return files;
@@ -127,22 +135,24 @@ NSArray * serarceFileArray(NSString *home,NSString *fileExt)
         
         NSEnumerator *filenum;
         NSString *filename;
-        NSArray *projectPathArray = serarceFileArray(home, @"project.pbxproj");
+        NSArray *projectPathArray = serarchFileArray(home, @"project.pbxproj");
         NSString *projectString;
         NSString *projectPath;
         
         
         //将路径字符串传递给文件管理器
         NSEnumerator *projectFileEnum = [projectPathArray objectEnumerator];
-        
-        while(projectPath = [projectFileEnum nextObject])
+
+        projectPath = [projectFileEnum nextObject];
+        while(projectPath)
         {
             
             projectString = [NSString stringWithContentsOfFile:projectPath
                                                       encoding:NSUTF8StringEncoding
                                                          error:nil];
             filenum = [files objectEnumerator];
-            while(filename=[filenum nextObject])
+            filename=[filenum nextObject];
+            while(filename)
             {
                 NSString *findString = [NSString stringWithFormat: @"/* %@ in Sources */ = {isa = PBXBuildFile; fileRef =",filename];
                 
@@ -155,10 +165,12 @@ NSArray * serarceFileArray(NSString *home,NSString *fileExt)
                     NSRange newRange = {range.location,[projectString length] - range.location};
                     projectString = [projectString stringByReplacingOccurrencesOfString:temp withString:replaceString options:0 range:newRange];
                 }
+                filename=[filenum nextObject];
             }
             [projectString writeToFile:projectPath  atomically:YES encoding:4 error:nil];
-            
-            
+
+
+            projectPath = [projectFileEnum nextObject];
         }
         
         

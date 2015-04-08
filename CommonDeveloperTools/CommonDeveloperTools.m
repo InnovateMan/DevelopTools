@@ -9,10 +9,13 @@
 #import "CommonDeveloperTools.h"
 #import "CreateEntityWindowController.h"
 #import "HandleARCWindowController.h"
+#import "HandleARCForThirdWindowController.h"
+
 @interface CommonDeveloperTools()
 {
-	CreateEntityWindowController *createEntityWindowController;
-    HandleARCWindowController *arcWindowContrller;
+	CreateEntityWindowController *_createEntityWindowController;
+    HandleARCWindowController    *_arcWindowController;
+	HandleARCForThirdWindowController *_arcForThirdWindowController;
     
 }
 @property (nonatomic, retain) NSBundle *bundle;
@@ -27,7 +30,8 @@
     static id sharedPlugin = nil;
     static dispatch_once_t onceToken;
     NSString *currentApplicationName = [[NSBundle mainBundle] infoDictionary][@"CFBundleName"];
-    if ([currentApplicationName isEqual:@"Xcode"]) {
+    if ([currentApplicationName isEqual:@"Xcode"]) 
+	{
         dispatch_once(&onceToken, ^
 		{
             sharedPlugin = [[self alloc] initWithBundle:plugin];
@@ -88,39 +92,33 @@
 
 			[author setTarget:self];
 			[newMenu addItem:author];
-            
- 
-
 
 
         }
 		[newMenu release];
 		[menuItem release];
         
-//        [[NSNotificationCenter defaultCenter] addObserver:self
-//                                                 selector:@selector(applicationDidFinishLaunching:)
-//                                                     name:NSApplicationDidFinishLaunchingNotification
-//                                                   object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(applicationDidFinishLaunching:)
+                                                     name:NSApplicationDidFinishLaunchingNotification
+                                                   object:nil];
 
     }
     return self;
 }
 
-- (void) applicationDidFinishLaunching: (NSNotification*) noti {
-    NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:@"%@",noti]
-                                     defaultButton:nil
-                                   alternateButton:nil
-                                       otherButton:nil
-                         informativeTextWithFormat:@""];
-    
-    [alert runModal];
+- (void) applicationDidFinishLaunching: (NSNotification*) noti
+{
+
 
 }
 
 
-- (NSMutableArray *)projectsInCurrentWorkspace {
+- (NSMutableArray *)projectsInCurrentWorkspace
+{
     NSMutableArray *projects = [_projectsByWorkspace objectForKey:[self currentWorkspace]];
-    if (!projects) {
+    if (!projects)
+    {
         projects = [NSMutableArray array];
         [_projectsByWorkspace setObject:projects forKey:[self currentWorkspace]];
     }
@@ -128,7 +126,8 @@
     return projects;
 }
 
-- (NSString *)currentWorkspace {
+- (NSString *)currentWorkspace
+{
     return @"workspace";
     // this code below is not working if tried a few moments after opening xcode
     //    NSString *workspacePath = [MHXcodeDocumentNavigator currentWorkspacePath];
@@ -138,52 +137,69 @@
 - (void)showCreateEntityView
 {
 
-	if (!createEntityWindowController)
+	if (!_createEntityWindowController)
     {
-        createEntityWindowController = [[CreateEntityWindowController alloc] initWithWindowNibName:@"CreateEntityWindowController"];
-		createEntityWindowController.bundle = [NSBundle bundleForClass:[self class]];
+        _createEntityWindowController = [[CreateEntityWindowController alloc] initWithWindowNibName:@"CreateEntityWindowController"];
+		_createEntityWindowController.bundle = [NSBundle bundleForClass:[self class]];
     }
 
-    [[createEntityWindowController window] makeKeyAndOrderFront:nil];
+    [[_createEntityWindowController window] makeKeyAndOrderFront:nil];
 
 }
 
 - (void)addARCConfig
 {
-    if (!arcWindowContrller)
+    if (!_arcWindowController)
     {
-        arcWindowContrller = [[HandleARCWindowController alloc] initWithWindowNibName:@"HandleARCWindowController"];
-        createEntityWindowController.bundle = [NSBundle bundleForClass:[self class]];
-    }
+        _arcWindowController = [[HandleARCWindowController alloc] initWithWindowNibName:@"HandleARCWindowController"];
 
-    [[arcWindowContrller window] makeKeyAndOrderFront:nil];
+	}
+
+    [[_arcWindowController window] makeKeyAndOrderFront:nil];
 }
 
 
 - (void)addARCConfigForThirdPart
 {
-    
+    if (!_arcForThirdWindowController)
+    {
+        _arcForThirdWindowController = [[HandleARCForThirdWindowController alloc] initWithWindowNibName:@"HandleARCForThirdWindowController"];
+    }
+    [[_arcForThirdWindowController window] makeKeyAndOrderFront:nil];
+
 }
 
 - (void)showAuthor
 {
-    NSAlert *alert = [NSAlert alertWithMessageText:@"非常感谢您使用此插件，祝工作愉快！\n 作者：孙宇" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
+    NSAlert *alert = [NSAlert alertWithMessageText:@"非常感谢您使用此插件，祝工作愉快！\n 作者：孙宇"
+                                     defaultButton:nil
+                                   alternateButton:nil
+                                       otherButton:nil
+                         informativeTextWithFormat:@""];
     [alert runModal];
 }
 
 - (void)dealloc
 {
-	if (createEntityWindowController)
+	if (_createEntityWindowController)
 	{
-		[createEntityWindowController release];
+		[_createEntityWindowController release];
 	}
     
-    if (arcWindowContrller)
+    if (_arcWindowController)
     {
-        [arcWindowContrller release];
+        [_arcWindowController release];
     }
+
+    if (_arcForThirdWindowController)
+    {
+        [_arcForThirdWindowController release];
+    }
+    [_projectsByWorkspace release];
+
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-	[super dealloc];
+
+    [super dealloc];
 }
 
 @end
