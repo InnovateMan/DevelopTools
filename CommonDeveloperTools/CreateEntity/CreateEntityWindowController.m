@@ -276,9 +276,9 @@ static NSMutableArray *generateClassArray = nil;
     NSMutableString *variabls = [NSMutableString string];
     NSMutableString *import = [NSMutableString string];
 
-    NSMutableString *defineString = [NSMutableString string];
-	
+    NSMutableString *defineString = [NSMutableString string];	
 	NSMutableString *setteString = [NSMutableString string];
+
 
 
 
@@ -326,7 +326,7 @@ static NSMutableArray *generateClassArray = nil;
 			[import appendFormat:@"#import \"%@.h\"\n",className1];
 
 		}
-		
+
         
         NSString *className = [[temStr componentsSeparatedByString:@" "] objectAtIndex:0];
 		if (className && [className length] > 0)
