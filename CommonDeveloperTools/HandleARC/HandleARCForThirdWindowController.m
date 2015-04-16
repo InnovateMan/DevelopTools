@@ -54,6 +54,38 @@
      }];
 }
 
+
+- (NSArray *)serarchFileArrayFromHome:(NSString *)home extString:(NSString *)fileExt
+{
+    NSMutableArray *files = [[NSMutableArray alloc] init];
+    
+    @autoreleasepool
+    {
+        NSFileManager *manager;
+        manager = [NSFileManager defaultManager];
+        
+        //将路径字符串传递给文件管理器
+        NSDirectoryEnumerator *direnum;
+        direnum = [manager enumeratorAtPath:home];
+        
+        //准备工作就绪 现在开始循环
+        NSString *filename;
+        filename = [direnum nextObject];
+        while(filename)
+        {
+            NSString *filePath = [home stringByAppendingPathComponent :filename];
+            
+            if([filename hasSuffix: fileExt])
+            {
+                [files addObject:filePath];
+            }
+            filename = [direnum nextObject];
+        }
+    }
+    return files;
+    
+}
+
 - (IBAction)beginHandle:(NSButton *)sender
 {
     if ([self.thirdPartPath.stringValue length] == 0 ||
@@ -88,8 +120,8 @@
             filename = [direnum nextObject];
             while(filename)
             {
-                NSString *filePath = [home stringByAppendingPathComponent :filename];
-                [files addObject:filePath];
+//                NSString *filePath = [home stringByAppendingPathComponent :filename];
+                [files addObject:[filename lastPathComponent]];
                 filename = [direnum nextObject];
             }
         }
@@ -97,7 +129,10 @@
         
         NSEnumerator *filenum;
         NSString *filename;
-        NSArray *projectPathArray = serarchFileArray(self.projectPath.stringValue, @"project.pbxproj");
+//        NSArray *projectPathArray = serarchFileArray(self.projectPath.stringValue, @"project.pbxproj");
+        
+        NSArray *projectPathArray =  [self serarchFileArrayFromHome:self.projectPath.stringValue
+                                                            extString: @"project.pbxproj"];
         
         if ([projectPathArray count] == 0)
         {

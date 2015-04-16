@@ -70,6 +70,8 @@ NSArray * serachARCFileInDir(NSString *filePath)
     
 }
 
+
+
 NSArray *serarchFileArray(NSString *home, NSString *fileExt)
 {
     NSMutableArray *files = [NSMutableArray array];
