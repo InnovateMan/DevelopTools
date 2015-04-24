@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		277FC471FFE4393AEB57F767 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 277FC91637C6CD646AF92722 /* JSONKit.m */; };
 		277FC9AF57C7201C1A045F5C /* JPinYinUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 277FC1C9285235A424C260AA /* JPinYinUtil.m */; };
+		A8059B801AE9E14F00E6FD48 /* FileSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E9E5041AE9DBE300AB4D89 /* FileSearch.m */; };
+		A8059B811AE9E15400E6FD48 /* HandleMRCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E9E4FF1AE9DB2100AB4D89 /* HandleMRCWindowController.m */; };
+		A8059B821AE9E1D800E6FD48 /* HandleMRCWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E9E5001AE9DB2100AB4D89 /* HandleMRCWindowController.xib */; };
 		A80879351ACD292100AB8E33 /* HandleARCForThirdWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A80879331ACD292100AB8E33 /* HandleARCForThirdWindowController.m */; };
 		A80879361ACD292100AB8E33 /* HandleARCForThirdWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80879341ACD292100AB8E33 /* HandleARCForThirdWindowController.xib */; };
 		A825E3C41ACCDE0900A4DE5C /* HandleARCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825E3C21ACCDE0900A4DE5C /* HandleARCWindowController.m */; };
@@ -19,6 +22,9 @@
 		A87508871AD5720600354495 /* HandleARCForThirdWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A80879331ACD292100AB8E33 /* HandleARCForThirdWindowController.m */; };
 		A87508881AD5720F00354495 /* HandleARCWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A825E3C31ACCDE0900A4DE5C /* HandleARCWindowController.xib */; };
 		A87508891AD5721400354495 /* HandleARCForThirdWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80879341ACD292100AB8E33 /* HandleARCForThirdWindowController.xib */; };
+		A8E9E5011AE9DB2100AB4D89 /* HandleMRCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E9E4FF1AE9DB2100AB4D89 /* HandleMRCWindowController.m */; };
+		A8E9E5021AE9DB2100AB4D89 /* HandleMRCWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E9E5001AE9DB2100AB4D89 /* HandleMRCWindowController.xib */; };
+		A8E9E5051AE9DBE300AB4D89 /* FileSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E9E5041AE9DBE300AB4D89 /* FileSearch.m */; };
 		E92F4FBE18F3DE84001A1DAA /* ObjectType.plist in Resources */ = {isa = PBXBuildFile; fileRef = E92F4FBD18F3DE84001A1DAA /* ObjectType.plist */; };
 		E94B416818F3EF1300121B3A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94B416718F3EF1300121B3A /* Cocoa.framework */; };
 		E94B417218F3EF1300121B3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E94B417018F3EF1300121B3A /* InfoPlist.strings */; };
@@ -83,6 +89,11 @@
 		A825E3C21ACCDE0900A4DE5C /* HandleARCWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleARCWindowController.m; sourceTree = "<group>"; };
 		A825E3C31ACCDE0900A4DE5C /* HandleARCWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandleARCWindowController.xib; sourceTree = "<group>"; };
 		A8861A3F1ACBAA52007C671C /* XcodeMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeMisc.h; sourceTree = "<group>"; };
+		A8E9E4FE1AE9DB2100AB4D89 /* HandleMRCWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleMRCWindowController.h; sourceTree = "<group>"; };
+		A8E9E4FF1AE9DB2100AB4D89 /* HandleMRCWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleMRCWindowController.m; sourceTree = "<group>"; };
+		A8E9E5001AE9DB2100AB4D89 /* HandleMRCWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandleMRCWindowController.xib; sourceTree = "<group>"; };
+		A8E9E5031AE9DBE300AB4D89 /* FileSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSearch.h; sourceTree = "<group>"; };
+		A8E9E5041AE9DBE300AB4D89 /* FileSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSearch.m; sourceTree = "<group>"; };
 		E92F4FBD18F3DE84001A1DAA /* ObjectType.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ObjectType.plist; sourceTree = "<group>"; };
 		E94B416618F3EF1300121B3A /* DeveloperTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeveloperTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94B416718F3EF1300121B3A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -175,6 +186,16 @@
 				A80879341ACD292100AB8E33 /* HandleARCForThirdWindowController.xib */,
 			);
 			path = HandleARC;
+			sourceTree = "<group>";
+		};
+		A8E9E4FD1AE9DB1800AB4D89 /* HandleMRC */ = {
+			isa = PBXGroup;
+			children = (
+				A8E9E4FE1AE9DB2100AB4D89 /* HandleMRCWindowController.h */,
+				A8E9E4FF1AE9DB2100AB4D89 /* HandleMRCWindowController.m */,
+				A8E9E5001AE9DB2100AB4D89 /* HandleMRCWindowController.xib */,
+			);
+			path = HandleMRC;
 			sourceTree = "<group>";
 		};
 		A8EDB5ED1AD4FCD400EB5062 /* ThirdPart */ = {
@@ -279,6 +300,7 @@
 		E9D4988018F3CF6E003C8665 /* CommonDeveloperTools */ = {
 			isa = PBXGroup;
 			children = (
+				A8E9E4FD1AE9DB1800AB4D89 /* HandleMRC */,
 				A825E3C01ACCDDC200A4DE5C /* HandleARC */,
 				E9EF894118F3D35A00EDB754 /* CreateEntity */,
 				E9D4988618F3CF6E003C8665 /* CommonDeveloperTools.h */,
@@ -327,6 +349,8 @@
 				E9EF895718F3D37500EDB754 /* StringUtil.h */,
 				E9EF895818F3D37500EDB754 /* StringUtil.m */,
 				A8861A3F1ACBAA52007C671C /* XcodeMisc.h */,
+				A8E9E5031AE9DBE300AB4D89 /* FileSearch.h */,
+				A8E9E5041AE9DBE300AB4D89 /* FileSearch.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -425,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8059B821AE9E1D800E6FD48 /* HandleMRCWindowController.xib in Resources */,
 				E94B417218F3EF1300121B3A /* InfoPlist.strings in Resources */,
 				E94B418018F3EF1300121B3A /* Images.xcassets in Resources */,
 				A87508891AD5721400354495 /* HandleARCForThirdWindowController.xib in Resources */,
@@ -457,6 +482,7 @@
 				E9EF896B18F3D45500EDB754 /* templateH in Resources */,
 				E9EF896818F3D44400EDB754 /* EntityPropertyWindowController.xib in Resources */,
 				E9D4988518F3CF6E003C8665 /* InfoPlist.strings in Resources */,
+				A8E9E5021AE9DB2100AB4D89 /* HandleMRCWindowController.xib in Resources */,
 				A80879361ACD292100AB8E33 /* HandleARCForThirdWindowController.xib in Resources */,
 				E92F4FBE18F3DE84001A1DAA /* ObjectType.plist in Resources */,
 			);
@@ -473,6 +499,8 @@
 				E94B41A118F3EF8500121B3A /* AppDelegate.m in Sources */,
 				A87508871AD5720600354495 /* HandleARCForThirdWindowController.m in Sources */,
 				E94B417418F3EF1300121B3A /* main.m in Sources */,
+				A8059B811AE9E15400E6FD48 /* HandleMRCWindowController.m in Sources */,
+				A8059B801AE9E14F00E6FD48 /* FileSearch.m in Sources */,
 				A87508841AD56EC100354495 /* JPinYinUtil.m in Sources */,
 				A87508851AD56EC100354495 /* JSONKit.m in Sources */,
 				E94B41AC18F3EFB400121B3A /* StringUtil.m in Sources */,
@@ -500,6 +528,8 @@
 				E9EF895E18F3D37500EDB754 /* StringUtil.m in Sources */,
 				A80879351ACD292100AB8E33 /* HandleARCForThirdWindowController.m in Sources */,
 				E9EF895B18F3D37500EDB754 /* NSData+base64.m in Sources */,
+				A8E9E5051AE9DBE300AB4D89 /* FileSearch.m in Sources */,
+				A8E9E5011AE9DB2100AB4D89 /* HandleMRCWindowController.m in Sources */,
 				A825E3C41ACCDE0900A4DE5C /* HandleARCWindowController.m in Sources */,
 				E9EF895C18F3D37500EDB754 /* NSObject+Properties.m in Sources */,
 				E9EF896718F3D44400EDB754 /* EntityPropertyWindowController.m in Sources */,

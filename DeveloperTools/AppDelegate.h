@@ -10,12 +10,16 @@
 #import "CreateEntityWindowController.h"
 #import "HandleARCForThirdWindowController.h"
 #import "HandleARCWindowController.h"
+#import "HandleMRCWindowController.h"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
 
     CreateEntityWindowController *createEntityWindowController;
 	HandleARCWindowController    *_arcWindowController;
 	HandleARCForThirdWindowController *_arcForThirdWindowController;
+    HandleMRCWindowController *_mrcWindowController;
+
 
 }
 @property (assign) IBOutlet NSWindow *window;

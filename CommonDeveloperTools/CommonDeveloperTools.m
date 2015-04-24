@@ -11,11 +11,16 @@
 #import "HandleARCWindowController.h"
 #import "HandleARCForThirdWindowController.h"
 
+#import "HandleMRCWindowController.h"
+
+
 @interface CommonDeveloperTools()
 {
 	CreateEntityWindowController *_createEntityWindowController;
     HandleARCWindowController    *_arcWindowController;
 	HandleARCForThirdWindowController *_arcForThirdWindowController;
+    
+    HandleMRCWindowController *_mrcWindowController;
     
 }
 @property (nonatomic, retain) NSBundle *bundle;
@@ -68,6 +73,8 @@
 			[createEntity setTarget:self];
 			[newMenu addItem:createEntity];
             
+            [newMenu addItem:[NSMenuItem separatorItem]];
+            
             NSMenuItem * autoAddARCConfig = [[[NSMenuItem alloc] initWithTitle:@"ARC支持"
                                                                         action:@selector(addARCConfig)
                                                                  keyEquivalent:@""] autorelease];
@@ -85,6 +92,16 @@
 			//add splitter
 			[newMenu addItem:[NSMenuItem separatorItem]];
 
+            NSMenuItem * autoAddMRCConfig = [[[NSMenuItem alloc] initWithTitle:@"MRC支持"
+                                                                        action:@selector(addMRCConfig)
+                                                                 keyEquivalent:@""] autorelease];
+            
+            [autoAddMRCConfig setTarget:self];
+            [newMenu addItem:autoAddMRCConfig];
+            
+            
+            //add splitter
+            [newMenu addItem:[NSMenuItem separatorItem]];
 
 			NSMenuItem * author = [[[NSMenuItem alloc] initWithTitle:@"关于"
 																   action:@selector(showAuthor)
@@ -169,6 +186,17 @@
 
 }
 
+
+- (void)addMRCConfig
+{
+    
+    if (!_mrcWindowController)
+    {
+        _mrcWindowController = [[HandleMRCWindowController alloc] initWithWindowNibName:@"HandleMRCWindowController"];
+    }
+    [[_mrcWindowController window] makeKeyAndOrderFront:nil];
+}
+
 - (void)showAuthor
 {
     NSAlert *alert = [NSAlert alertWithMessageText:@"非常感谢您使用此插件，祝工作愉快！\n 作者：孙宇"
@@ -194,6 +222,11 @@
     if (_arcForThirdWindowController)
     {
         [_arcForThirdWindowController release];
+    }
+    
+    if (_mrcWindowController)
+    {
+        [_mrcWindowController release];
     }
     [_projectsByWorkspace release];
 

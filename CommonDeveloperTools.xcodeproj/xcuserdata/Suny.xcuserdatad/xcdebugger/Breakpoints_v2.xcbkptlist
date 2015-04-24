@@ -31,24 +31,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "378"
             endingLineNumber = "378"
-            landmarkName = "@implementation CreateEntityWindowController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CommonDeveloperTools/HandleARC/HandleARCWindowController.m"
-            timestampString = "450867432.068682"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "serarchFileArray()"
-            landmarkType = "7">
+            landmarkName = "-generateClass:forDic:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

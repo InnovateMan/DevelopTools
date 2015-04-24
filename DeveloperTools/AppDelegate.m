@@ -24,7 +24,16 @@
 	{
 		[_arcForThirdWindowController release];
 	}
-    [createEntityWindowController release];
+    
+    if (createEntityWindowController)
+    {
+        [createEntityWindowController release];
+    }
+    if (_mrcWindowController)
+    {
+        [_mrcWindowController release];
+    }
+
     [super dealloc];
 }
 
@@ -68,5 +77,14 @@
 	
 }
 
+- (IBAction)addMrcConfig:(id)sender
+{
+ 
+        if (!_mrcWindowController)
+        {
+            _mrcWindowController = [[HandleMRCWindowController alloc] initWithWindowNibName:@"HandleMRCWindowController"];
+        }
+        [[_mrcWindowController window] makeKeyAndOrderFront:nil];
+}
 
 @end

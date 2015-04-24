@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="HandleMRCWindowController">
+            <connections>
+                <outlet property="indicator" destination="dOr-5n-j9g" id="vt5-Uy-MmV"/>
+                <outlet property="pathTextField" destination="E9X-P9-DQA" id="cRR-M7-HI7"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="126"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="126"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YVZ-2F-gtQ">
+                        <rect key="frame" x="4" y="89" width="43" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="路径：" id="ax2-eD-2qn">
+                            <font key="font" size="13" name="STHeitiSC-Light"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8rP-vI-tsU">
+                        <rect key="frame" x="288" y="43" width="116" height="25"/>
+                        <buttonCell key="cell" type="roundTextured" title="开始处理" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jb4-YX-Yj4">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name="STHeitiSC-Light"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="beginHandle:" target="-2" id="1ga-fO-3Ew"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eM4-kg-cbT">
+                        <rect key="frame" x="63" y="43" width="116" height="25"/>
+                        <buttonCell key="cell" type="roundTextured" title="更改路径" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1gI-uB-svP">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name="STHeitiSC-Light"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="changePathBtnClick:" target="-2" id="AQK-8i-zpz"/>
+                        </connections>
+                    </button>
+                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="dOr-5n-j9g">
+                        <rect key="frame" x="216" y="65" width="32" height="32"/>
+                    </progressIndicator>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9X-P9-DQA">
+                        <rect key="frame" x="43" y="89" width="419" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="请点击更改路径按钮修改" id="oYs-i4-Fbt">
+                            <font key="font" size="13" name="STHeitiSC-Light"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="567" y="414"/>
+        </window>
+    </objects>
+</document>
