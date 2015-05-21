@@ -135,7 +135,7 @@
         NSMutableArray *resultFixed = [NSMutableArray array];
         for (NSString *aCrash in crashLogs)
         {
-            if ([aCrash containsString:@"SVPPlayerController"] || [aCrash containsString:@"AVPlayerItem"])
+            if ([aCrash containsString:@"SVPPlayerController"] || [aCrash containsString:@"AVPlayerItem"] || [aCrash containsString:@"AVPlayer"])
             {
                 [resultSVP addObject:aCrash];
             }
