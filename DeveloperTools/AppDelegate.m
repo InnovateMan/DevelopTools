@@ -33,6 +33,10 @@
     {
         [_mrcWindowController release];
     }
+    if (_handleCrashWindowController)
+    {
+        [_handleCrashWindowController release];
+    }
 
     [super dealloc];
 }
@@ -85,6 +89,15 @@
             _mrcWindowController = [[HandleMRCWindowController alloc] initWithWindowNibName:@"HandleMRCWindowController"];
         }
         [[_mrcWindowController window] makeKeyAndOrderFront:nil];
+}
+
+- (IBAction)addCrashLog:(id)sender
+{
+    if (!_handleCrashWindowController)
+    {
+        _handleCrashWindowController = [[HandleCrashLog alloc] initWithWindowNibName:@"HandleCrashLog"];
+    }
+    [[_handleCrashWindowController window] makeKeyAndOrderFront:nil];
 }
 
 @end
