@@ -11,6 +11,7 @@
 #import "HandleARCForThirdWindowController.h"
 #import "HandleARCWindowController.h"
 #import "HandleMRCWindowController.h"
+#import "HandleCrashLog.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
@@ -19,6 +20,7 @@
 	HandleARCWindowController    *_arcWindowController;
 	HandleARCForThirdWindowController *_arcForThirdWindowController;
     HandleMRCWindowController *_mrcWindowController;
+    HandleCrashLog  *_handleCrashWindowController;
 
 
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		277FC471FFE4393AEB57F767 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 277FC91637C6CD646AF92722 /* JSONKit.m */; };
 		277FC9AF57C7201C1A045F5C /* JPinYinUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 277FC1C9285235A424C260AA /* JPinYinUtil.m */; };
+		278EE5AE1B0C83540023933A /* HandleCrashLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 278EE5AA1B0C7C050023933A /* HandleCrashLog.m */; };
+		278EE5AF1B0C83790023933A /* HandleCrashLog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278EE5AB1B0C7C050023933A /* HandleCrashLog.xib */; };
 		A8059B801AE9E14F00E6FD48 /* FileSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E9E5041AE9DBE300AB4D89 /* FileSearch.m */; };
 		A8059B811AE9E15400E6FD48 /* HandleMRCWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E9E4FF1AE9DB2100AB4D89 /* HandleMRCWindowController.m */; };
 		A8059B821AE9E1D800E6FD48 /* HandleMRCWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E9E5001AE9DB2100AB4D89 /* HandleMRCWindowController.xib */; };
@@ -82,6 +84,9 @@
 		277FC29CF2E834172161B348 /* JPinYinUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPinYinUtil.h; sourceTree = "<group>"; };
 		277FC91637C6CD646AF92722 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		277FCE47BF2481A26EA23956 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		278EE5A91B0C7C050023933A /* HandleCrashLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HandleCrashLog.h; path = HandleCrashLog/HandleCrashLog.h; sourceTree = "<group>"; };
+		278EE5AA1B0C7C050023933A /* HandleCrashLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HandleCrashLog.m; path = HandleCrashLog/HandleCrashLog.m; sourceTree = "<group>"; };
+		278EE5AB1B0C7C050023933A /* HandleCrashLog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HandleCrashLog.xib; path = HandleCrashLog/HandleCrashLog.xib; sourceTree = "<group>"; };
 		A80879321ACD292100AB8E33 /* HandleARCForThirdWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleARCForThirdWindowController.h; sourceTree = "<group>"; };
 		A80879331ACD292100AB8E33 /* HandleARCForThirdWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleARCForThirdWindowController.m; sourceTree = "<group>"; };
 		A80879341ACD292100AB8E33 /* HandleARCForThirdWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandleARCForThirdWindowController.xib; sourceTree = "<group>"; };
@@ -175,6 +180,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		278EE5A81B0C7B950023933A /* CrashLog */ = {
+			isa = PBXGroup;
+			children = (
+				278EE5A91B0C7C050023933A /* HandleCrashLog.h */,
+				278EE5AA1B0C7C050023933A /* HandleCrashLog.m */,
+				278EE5AB1B0C7C050023933A /* HandleCrashLog.xib */,
+			);
+			name = CrashLog;
+			sourceTree = "<group>";
+		};
 		A825E3C01ACCDDC200A4DE5C /* HandleARC */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +315,7 @@
 		E9D4988018F3CF6E003C8665 /* CommonDeveloperTools */ = {
 			isa = PBXGroup;
 			children = (
+				278EE5A81B0C7B950023933A /* CrashLog */,
 				A8E9E4FD1AE9DB1800AB4D89 /* HandleMRC */,
 				A825E3C01ACCDDC200A4DE5C /* HandleARC */,
 				E9EF894118F3D35A00EDB754 /* CreateEntity */,
@@ -456,6 +472,7 @@
 				E94B41AF18F3EFD100121B3A /* templateM in Resources */,
 				E94B41A618F3EFA100121B3A /* EntityPropertyWindowController.xib in Resources */,
 				E94B41B718F3F47700121B3A /* CreateEntityWindowController.xib in Resources */,
+				278EE5AF1B0C83790023933A /* HandleCrashLog.xib in Resources */,
 				E94B417818F3EF1300121B3A /* Credits.rtf in Resources */,
 				A87508881AD5720F00354495 /* HandleARCWindowController.xib in Resources */,
 				E94B41A218F3EF8500121B3A /* MainMenu.xib in Resources */,
@@ -505,6 +522,7 @@
 				A87508851AD56EC100354495 /* JSONKit.m in Sources */,
 				E94B41AC18F3EFB400121B3A /* StringUtil.m in Sources */,
 				A87508861AD5720600354495 /* HandleARCWindowController.m in Sources */,
+				278EE5AE1B0C83540023933A /* HandleCrashLog.m in Sources */,
 				E94B41B618F3F45400121B3A /* CreateEntityWindowController.m in Sources */,
 				E94B41A918F3EFB400121B3A /* NSData+base64.m in Sources */,
 				E94B41AA18F3EFB400121B3A /* NSObject+Properties.m in Sources */,
