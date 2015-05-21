@@ -118,14 +118,6 @@
         [[NSFileManager defaultManager] createDirectoryAtPath:newPath withIntermediateDirectories:YES attributes:nil error:nil];
         
         // 保存整体crash log
-        NSMutableArray *writeLogs = [NSMutableArray arrayWithArray:crashLogs];
-        NSString * totalCount = [NSString stringWithFormat:@"Version Number:%@.  Total Crash Count is:%ld",version,[writeLogs count]];
-        [writeLogs insertObject:totalCount atIndex:0];
-        
-        NSString *handledString = [writeLogs componentsJoinedByString:@"\n"];
-        NSString *newFilePath = [homePath stringByAppendingString:@"_460.txt"];
-        [handledString writeToFile:newFilePath  atomically:YES encoding:NSUTF8StringEncoding error:nil];
-        
         [self saveCrashLogs:crashLogs forVersion:version withHomePath:newPath withSaveName:@"all"];
         
         // 分crash类型保存
