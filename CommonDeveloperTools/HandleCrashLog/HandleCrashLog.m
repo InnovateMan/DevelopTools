@@ -62,7 +62,7 @@
 
             
             // 解析想要的版本的crash日志
-            NSArray *versions = @[@"460",@"461"];       //添加想要的版本号到此即可.如：470
+            NSArray *versions = @[@"460",@"461",@"470"];       //添加想要的版本号到此即可.如：470
             NSMutableDictionary *resultDiction = [NSMutableDictionary dictionary];
             for (NSString *version in versions)
             {
